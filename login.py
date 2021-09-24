@@ -24,7 +24,8 @@ login_correct = check_login(username, password)
 cookie_found = check_cookie()
 
 if login_correct is True and cookie_found is False:
-    print("Set-Cookie: %s=%s" % (username, password))
+    print("Set-Cookie: username=%s" % username)
+    print("Set-Cookie: password=%s" % password)
 
 print("Content-Type: text/html\r\n\r\n")
 print("<html>")
